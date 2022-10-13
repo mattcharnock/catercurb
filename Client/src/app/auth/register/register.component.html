@@ -1,0 +1,25 @@
+<div class="container-fluid nopadding">
+  <div class="row">
+    <div class="col-xs-12 nopadding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-xs-12 col-sm-3"></div>
+          <div class="col-md-4 col-xs-12 col-sm-6 auth-outer">
+            <h3 class = 'text-center auth-title'>Register</h3>
+            <div class="auth-container text-center">
+              <img class = 'logo-login' src = '../../../assets/logo.svg' width = '130px'/>
+              <input [(ngModel)]="this.firstName" class = 'auth-input' type="text" placeholder = 'First Name'>
+              <input [(ngModel)]="this.lastName" class = 'auth-input' type="text" placeholder = 'Last Name'>
+              <input [(ngModel)]="this.email" class = 'auth-input' type="text" placeholder = 'Email Address'>
+              <input [(ngModel)]="this.password" class = 'auth-input' type="password" placeholder = 'Password'>
+              <input (click) = 'registerAuth()' class = 'auth-submit' type="submit" value = 'Register'>
+              <p class = 'alert-login text-center' *ngIf="this.credentials === true">Missing credentials. Please fill out all fields.</p>
+            </div>
+            <p class = 'auth-switch text-center'>Already have an account? <a routerLink="/login" class = 'switch-link'>Sign in here.</a></p>
+          </div>
+          <div class="col-md-4 col-xs-12 col-sm-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
