@@ -8,10 +8,10 @@
             <h3 class = 'text-center auth-title'>Log in</h3>
             <div class="auth-container text-center">
               <img class = 'logo-login' src = '../../../assets/logo.svg' width = '130px'/>
-              <form name = 'login'>
-                <input [ngClass]="{'invalid-inputs': this.credentials === true}" name = 'email' [(ngModel)]="this.email" class = 'auth-input' type="text" placeholder = 'Email Address' required>
-                <input [ngClass]="{'invalid-inputs': this.credentials === true}" name = 'password' [(ngModel)]="this.password" class = 'auth-input' type="password" placeholder = 'Password' required>
-                <input (click) = 'loginAuth()' class = 'auth-submit' type="submit" value = 'Sign In'>
+              <form [formGroup]="authForm" (ngSubmit)="loginAuth()" >
+                <input [ngClass]="{'invalid-inputs': (authForm.controls.email.errors && authForm.controls.email.touched) || invalidEmail && !authForm.controls.email.touched}" formControlName="email" class = 'auth-input' type="text" placeholder = 'Email Address' required>
+                <input [ngClass]="{'invalid-inputs': (authForm.controls.password.errors && authForm.controls.password.touched) || invalidPassword && !authForm.controls.password.touched}" formControlName="password" class = 'auth-input' type="password" placeholder = 'Password' required>
+                <input class = 'auth-submit' type="submit" value = 'Sign In'>
                 <p class = 'alert-login text-center' *ngIf="this.credentials === true">Incorrect credentials. Please try again.</p>
               </form>
               <p class = 'text-right forgot'><a routerLink="reset-password">Forgot Password</a></p>

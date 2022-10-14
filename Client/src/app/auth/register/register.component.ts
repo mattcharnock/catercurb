@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,24 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
 
-  firstName: any;
-  lastName: any;
-  email: any;
-  password: any;
+  registerForm:any;
   credentials = false;
+  invalidFirstName = false;
+  invalidLastName = false;
+  invalidEmail = false;
+  invalidPassword = false;
 
   ngOnInit(): void {
+    this.registerForm = this.formBuilder.group({
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
   }
 
   registerAuth() {
-    const authInfo = {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      password: this.password
+    if (this.registerForm.invalid) {
+      if (this.registerForm.controls.firstName.errors) {
+        this.invalidFirstName = true
+      } else {}
+      if (this.registerForm.controls.lastName.errors) {
+        this.invalidLastName = true
+      } else {}
+      if (this.registerForm.controls.email.errors) {
+        this.invalidEmail = true
+      } else {}
+      if (this.registerForm.controls.password.errors) {
+        this.invalidPassword = true
+      } else {}
     }
+    console.log(this.registerForm)
   }
 
 }
