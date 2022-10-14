@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,37 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
 
-  email: any;
-  password: any;
+  authForm: any;
   credentials = false;
-  user = {
-    email: 'mrcharnock01@gmail.com',
-    password: 'Mc7412369!'
-  }
+  invalidEmail = false;
+  invalidPassword = false
+
 
   ngOnInit(): void {
+    this.authForm = this.formBuilder.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
+
   }
 
 
   loginAuth() {
-    const authInfo = {
-      email: this.email,
-      password: this.password
-    }
-    if (authInfo.email.length === 0 || authInfo.password.length === 0) {
-      this.credentials = true
-    }
-    else {
-      if (authInfo.email === this.user.email && authInfo.password === this.user.password) {
-        console.log('confirmed')
-        this.credentials = false
+    if (this.authForm.invalid) {
+      if(this.authForm.controls.email.errors) {
+        this.invalidEmail = true
+      } else {}
+      if (this.authForm.controls.password.errors) {
+        this.invalidPassword = true
       }
-      else {
-        this.credentials = true
-      }
+
     }
+    console.log(this.authForm)
   }
 
 
