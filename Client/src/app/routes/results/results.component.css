@@ -1,0 +1,22 @@
+.search-header {
+  background: url(../../../assets/search-design.svg);
+  height: 75px;
+  background-size: cover;
+}
+.results {
+  padding: 30px 0px
+}
+/* Desktop */
+@media only screen and (min-width: 992px) {
+
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .results {
+    padding: 20px 0px
+  }
+}

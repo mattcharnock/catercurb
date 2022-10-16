@@ -1,0 +1,67 @@
+#home-main {
+  background: url(../../../assets/above-the-fold-background.png) rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+h1 {
+  color: #fff;
+}
+
+.cta-description {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 25px
+}
+
+.results-container {
+  padding: 35px 15px
+}
+
+.heading {
+  margin-top: 5%
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  #home-main {
+    min-height: 80vh;
+    background-size: cover;
+  }
+  hr {
+    width: 400px;
+    margin: 25px 0px
+  }
+  h1 {
+    padding-right: 35%
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #home-main {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+  }
+  hr {
+    width: 400px;
+    margin: 25px 0px
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  #home-main {
+    background: url(../../../assets/mobile-home-background.png) rgba(0, 0, 0, 0.8) !important;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+  }
+  hr {
+    margin: 25px 0px
+  }
+  .results-container {
+    padding: 25px 0px
+  }
+  h1 {
+    color: #fff;
+  }
+}
