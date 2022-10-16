@@ -1,0 +1,179 @@
+<div class="container-fluid nopadding results-inner">
+  <div class="row">
+    <div class="col-md-2 col-xs-12 sidebar-filter">
+      <div class="desktop-sidebar">
+        <p class = 'filter-title'>Filters</p>
+        <div class="price-filter">
+          <form class = 'text-left' [formGroup]="filtersPrice" (ngSubmit)="filter()" >
+            <label class = 'price-title'>Price</label>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'price-check' name = 'one' formControlName="one" type="checkbox">
+              <label class = 'price-label' for = "one">
+                <img  src="../../../assets/price-one.svg" alt="" width = '35px'>
+              </label>
+            </div>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'price-check' name = 'two' formControlName="one" type="checkbox">
+              <label class = 'price-label' for = "two">
+                <img  src="../../../assets/price-two.svg" alt="" width = '35px'>
+              </label>
+            </div>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'price-check' name = 'three' formControlName="one" type="checkbox">
+              <label class = 'price-label' for = "three">
+                <img  src="../../../assets/price-three.svg" alt="" width = '35px'>
+              </label>
+            </div>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'price-check' name = 'four' formControlName="one" type="checkbox">
+              <label class = 'price-label' for = "four">
+                <img  src="../../../assets/price-four.svg" alt="" width = '35px'>
+              </label>
+            </div>
+          </form>
+        </div>
+        <hr/>
+        <div class="diet-filter">
+          <form class = 'text-left' [formGroup]="filtersDiet" (ngSubmit)="filter()" >
+            <label class = 'diet-title'>Dietary</label>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'diet-check' name = 'vegan' formControlName="vegan" type="checkbox">
+              <label class = 'diet-label' for = "vegan">
+                Vegan
+              </label>
+            </div>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'diet-check' name = 'vegetarian' formControlName="vegetarian" type="checkbox">
+              <label class = 'diet-label' for = "vegetarian">
+                Vegetarian
+              </label>
+            </div>
+            <div class="checkbox-line">
+              <input (change)="filter()" class = 'diet-check' name = 'all' formControlName="all" type="checkbox">
+              <label class = 'diet-label' for = "all">
+                All
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mobile-sidebar">
+        <!--mobile filter-->
+      <button type="button" class="btn btn-primary filter-btn" data-toggle="modal" data-target="#exampleModal3">
+        Filter
+      </button>
+      <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-slideout" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Filter results</h5>
+            </div>
+            <div class="modal-body">
+              <div class="price-filter">
+                <form class = 'text-left' [formGroup]="filtersPrice" (ngSubmit)="filter()" >
+                  <label class = 'price-title'>Price</label>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'price-check' name = 'one' formControlName="one" type="checkbox">
+                    <label class = 'price-label' for = "one">
+                      <img  src="../../../assets/price-one.svg" alt="" width = '35px'>
+                    </label>
+                  </div>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'price-check' name = 'two' formControlName="one" type="checkbox">
+                    <label class = 'price-label' for = "two">
+                      <img  src="../../../assets/price-two.svg" alt="" width = '35px'>
+                    </label>
+                  </div>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'price-check' name = 'three' formControlName="one" type="checkbox">
+                    <label class = 'price-label' for = "three">
+                      <img  src="../../../assets/price-three.svg" alt="" width = '35px'>
+                    </label>
+                  </div>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'price-check' name = 'four' formControlName="one" type="checkbox">
+                    <label class = 'price-label' for = "four">
+                      <img  src="../../../assets/price-four.svg" alt="" width = '35px'>
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <hr/>
+              <div class="diet-filter">
+                <form class = 'text-left' [formGroup]="filtersDiet" (ngSubmit)="filter()" >
+                  <label class = 'diet-title'>Dietary</label>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'diet-check' name = 'vegan' formControlName="vegan" type="checkbox">
+                    <label class = 'diet-label' for = "vegan">
+                      Vegan
+                    </label>
+                  </div>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'diet-check' name = 'vegetarian' formControlName="vegetarian" type="checkbox">
+                    <label class = 'diet-label' for = "vegetarian">
+                      Vegetarian
+                    </label>
+                  </div>
+                  <div class="checkbox-line">
+                    <input (change)="filter()" class = 'diet-check' name = 'all' formControlName="all" type="checkbox">
+                    <label class = 'diet-label' for = "all">
+                      All
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End mobile filter-->
+      </div>
+    </div>
+    <div class="col-md-10 col-xs-12 search-results">
+      <div class="container-fluid nopadding">
+        <div class="row">
+          <div class="col-md-8 ">
+            <h2>Food Trucks Near ‘92677’</h2>
+            <p>82 Results</p>
+          </div>
+          <div class="col-md-4">
+
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <!--Loop Results-->
+      <div *ngFor="let listing of listings; let i = index" class="container-fluid nopadding">
+        <div class="row">
+          <div class="col-xs-12 ">
+            <div [ngStyle]="{'background-image':' url(' + listing.img + ')'}" class="featured-img">
+            </div>
+            <div class="featured-info">
+              <h3 class = 'business-name'>{{listing.businessName}}</h3>
+              <p class = 'business-county'>{{listing.businessCounty}}</p>
+              <div class="tags">
+                {{listing.tags[0]}}
+              </div>
+              <div class="tags">
+                {{listing.tags[1]}}
+              </div>
+              <div class="pricing-img">
+                <img *ngIf="listing.price.one === true" src="../../../assets/price-one.svg" alt="" width = "35px">
+                <img *ngIf="listing.price.two === true" src="../../../assets/price-two.svg" alt="" width = "35px">
+                <img *ngIf="listing.price.three === true" src="../../../assets/price-three.svg" alt="" width = "35px">
+                <img *ngIf="listing.price.four === true" src="../../../assets/price-four.svg" alt="" width = "35px">
+              </div>
+              <div>
+                <button routerLink="/listing" class = 'menu-button'>See Menu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </div>
+    </div>
+  </div>
+</div>

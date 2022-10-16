@@ -1,0 +1,63 @@
+.listing-header {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3744091386554622) 100%), url(https://images.pexels.com/photos/2518078/pexels-photo-2518078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  width: 100vw
+}
+h1 {
+  color: #fff;
+  margin-top: 0px
+}
+.listing-location {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 20px
+}
+.breadcrumbs {
+  padding: 15px 0px
+}
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .listing {
+    display: flex;
+  }
+  .listing-column {
+    align-self: self-end;
+  }
+  .listing-header {
+    height: 45vh;
+  }
+  .header-button {
+    text-align: right;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .listing {
+    display: flex;
+  }
+  .listing-column {
+    align-self: self-end;
+  }
+  .listing-header {
+    height: 25vh;
+  }
+  .header-button {
+    text-align: right;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .listing-header {
+    display: inline-block;
+    padding: 50px 15px 30px 15px
+  }
+  .header-button {
+    text-align: left;
+  }
+  .book-btn {
+    margin-bottom: 20px
+  }
+}

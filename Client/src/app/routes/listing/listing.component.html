@@ -1,0 +1,37 @@
+<div class="container-fluid nopadding">
+  <div class="row " id = 'home-main'>
+    <div class="col-sm-12 nopadding">
+      <app-listing-search-bar></app-listing-search-bar>
+    </div>
+  </div>
+  <div class="row breadcrumbs">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 nopadding">
+          <a (click)="back()">Results </a>
+          <span>> {{listing.businessName}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 nopadding listing listing-header">
+      <div class="col-md-6 col-xs-12 nopadding listing-column">
+        <div class="business-name">
+          <h1>{{listing.businessName}}</h1>
+        </div>
+        <div class="business-state">
+          <p class = 'listing-location'>{{listing.businessCounty}}, {{listing.businessState}}</p>
+          <button class = 'default-btn book-btn'>Book Batering</button>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12 nopadding listing-column header-button">
+        <button class = 'white-btn'>See More Photos</button>
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-md-9"></div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

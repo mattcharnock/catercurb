@@ -8,12 +8,14 @@
             <h3 class = 'text-center auth-title'>Register</h3>
             <div class="auth-container text-center">
               <img class = 'logo-login' src = '../../../assets/logo.svg' width = '130px'/>
-              <form [formGroup]="registerForm" (ngSubmit)="registerAuth()" >
-              <input [ngClass]="{'invalid-inputs': (registerForm.controls.firstName.errors && registerForm.controls.firstName.touched) || invalidFirstName && !registerForm.controls.firstName.touched}" formControlName="firstName" class = 'auth-input' type="text" placeholder = 'First Name'>
-              <input [ngClass]="{'invalid-inputs': (registerForm.controls.lastName.errors && registerForm.controls.lastName.touched) || invalidLastName && !registerForm.controls.lastName.touched}" formControlName="lastName" class = 'auth-input' type="text" placeholder = 'Last Name'>
-              <input [ngClass]="{'invalid-inputs': (registerForm.controls.email.errors && registerForm.controls.email.touched) || invalidEmail && !registerForm.controls.email.touched}" formControlName="email" class = 'auth-input' type="text" placeholder = 'Email Address'>
-              <input [ngClass]="{'invalid-inputs': (registerForm.controls.password.errors && registerForm.controls.password.touched) || invalidPassword && !registerForm.controls.password.touched}" formControlName="password" class = 'auth-input' type="password" placeholder = 'Password'>
-              <input class = 'auth-submit' type="submit" value = 'Register'>
+              <form class = 'text-left' [formGroup]="registerForm" (ngSubmit)="registerAuth()" >
+                <input [ngClass]="{'invalid-inputs': (registerForm.controls.firstName.errors && registerForm.controls.firstName.touched) || invalidFirstName && !registerForm.controls.firstName.touched}" formControlName="firstName" class = 'auth-input' type="text" placeholder = 'First Name'>
+                <input [ngClass]="{'invalid-inputs': (registerForm.controls.lastName.errors && registerForm.controls.lastName.touched) || invalidLastName && !registerForm.controls.lastName.touched}" formControlName="lastName" class = 'auth-input' type="text" placeholder = 'Last Name'>
+                <input [ngClass]="{'invalid-inputs': (registerForm.controls.email.errors && registerForm.controls.email.touched) || invalidEmail && !registerForm.controls.email.touched}" formControlName="email" class = 'auth-input' type="text" placeholder = 'Email Address'>
+                <input [ngClass]="{'invalid-inputs': (registerForm.controls.password.errors && registerForm.controls.password.touched) || invalidPassword && !registerForm.controls.password.touched}" formControlName="password" class = 'auth-input' type="password" placeholder = 'Password'>
+                <input [ngClass]="{'invalid-checkbox': invalidTerms && !registerForm.controls.terms.touched}" formControlName="terms" class = 'terms' type="checkbox" name = "terms">
+                <label class = 'terms-label' for = "terms">I accept the <a routerLink="/terms-and-conditions">terms and conditions</a></label>
+                <input class = 'auth-submit' type="submit" value = 'Register'>
               </form>
               <p class = 'alert-login text-center' *ngIf="this.credentials === true">Missing credentials. Please fill out all fields.</p>
             </div>

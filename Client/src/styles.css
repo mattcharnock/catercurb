@@ -21,6 +21,8 @@ h1 {
 h2 {
   font-family: myriad-pro,sans-serif;
   font-weight: 700;
+  font-size: 24px;
+  margin: 0px
 }
 h3 {
   font-family: myriad-pro,sans-serif;
@@ -30,7 +32,7 @@ h4 {
   font-family: myriad-pro,sans-serif;
   font-weight: 500;
 }
-p, a, span, button, input {
+p, a, span, button, input, label, div {
   font-family: myriad-pro,sans-serif;
   font-weight: 400;
 }
@@ -61,6 +63,9 @@ p, a, span, button, input {
 .auth-input::placeholder {
   color: #777777 !important;
   font-weight: 400
+}
+a {
+  cursor: pointer;
 }
 .auth-submit {
   width: 100%;
@@ -99,6 +104,70 @@ p, a, span, button, input {
 .invalid-inputs {
   border: 2px solid #CE0D0D
 }
+.invalid-checkbox {
+  outline: 1px solid #CE0D0D !important
+}
+
+.red-button {
+  width: 180px;
+  height: 50px;
+  background: #CE0D0D;
+  border-radius: 3px;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  font-size: 16px
+}
+
+.white-button {
+  width: 180px;
+  height: 50px;
+  background: transparent;
+  border-radius: 3px;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  font-size: 16px
+}
+
+.filter-btn {
+  background-color: #efefef !important;
+  color: #000 !important;;
+  border: 1px solid gray;
+  outline: 0px;
+  box-shadow: none;
+  font-size: 15px;
+  padding: 5px 20px;
+  text-shadow: none;
+  margin-bottom: 15px
+}
+.red-outline-btn {
+  border: 2px solid #CE0D0D;
+  border-radius: 5px;
+  color: #CE0D0D;
+  background-color: transparent;
+  padding: 15px 35px;
+  font-size: 16px
+}
+
+.default-btn {
+  background-color: #CE0D0D;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 35px;
+  font-size: 16px;
+  border: 0px
+}
+
+.white-btn {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: transparent;
+  padding: 10px 35px;
+  font-size: 16px
+}
+
 /* Desktop */
 @media only screen and (min-width: 1024px) {
   .auth-container {
@@ -106,6 +175,10 @@ p, a, span, button, input {
   }
   .auth-outer {
     padding: 0px 25px
+  }
+  .inline-button {
+    display: inline-block;
+    margin-right: 15px;
   }
 }
 /* Tablet */
@@ -115,6 +188,10 @@ p, a, span, button, input {
   }
   .auth-outer {
     padding: 0px 0px
+  }
+  .inline-button {
+    display: inline-block;
+    margin-right: 15px;
   }
 }
 /* Mobile */
@@ -138,6 +215,13 @@ p, a, span, button, input {
   }
   .auth-switch {
     font-size: 16px;
+  }
+  .inline-button {
+    display: block;
+    margin-bottom: 25px;
+    height: 55px;
+    width: 230px;
+    font-size: 17px
   }
 }
 

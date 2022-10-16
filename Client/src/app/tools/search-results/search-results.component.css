@@ -1,0 +1,108 @@
+.filter-title {
+  font-size: 17px
+}
+hr {
+  border-color: #D8D9DB
+}
+.price-check, .diet-check {
+  margin-right: 10px;
+  accent-color: #CE0D0D;
+  height: 15px;
+  width: 15px
+}
+.price-label, .diet-label {
+  font-weight: 400;
+  font-size: 16px;
+  vertical-align: top;
+  color: #000000
+}
+
+.diet-title {
+  margin-top: 0px
+}
+h2 {
+  margin-bottom: 5px
+}
+.desktop-sidebar {
+  position: sticky;
+  top: 20px
+}
+.featured-img {
+  display: inline-block;
+  height: 220px;
+  width: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin-right: 35px
+}
+.featured-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.business-name {
+  margin-bottom: 5px;
+  color: #4C839F;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tags {
+  display: inline-block;
+  background-color: #DEDEDE;
+  text-align: center;
+  padding: 3px 8px;
+  margin-right: 12px;
+  border-radius: 5px
+}
+.pricing-img {
+  display: inline-block;
+  margin-bottom: 20px
+}
+.menu-button {
+  border: 2px solid #CE0D0D;
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #CE0D0D;
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .sidebar-filter {
+    border-right: 1px solid #D8D9DB;
+    min-height: 90vh;
+  }
+  .search-results {
+    padding-left: 55px;
+  }
+  .mobile-sidebar {
+    display: none;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .desktop-sidebar {
+    display: none
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .search-results {
+    padding: 0px
+  }
+  .desktop-sidebar {
+    display: none
+  }
+  .featured-img {
+    display: block;
+    height: 220px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+  .menu-button {
+    padding: 10px 25px;
+    font-size: 16pxs
+  }
+}
